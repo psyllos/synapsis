@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="syn-app">
+  <template>
+    <style>
+      app-header {
+        color: white;
+        background-color: #4285f4;
+      }
+    </style>
+    
+    <app-header-layout fullbleed>
+      <app-header slot="header" fixed condenses>
+        <app-toolbar>
+          <div main-title>Synapsis</div>
+        </app-toolbar>
+      </app-header>
+      <div>
+        main content
+      </div>
+    </app-header-layout>
+
+  </template>
+  <script>
+    class SynApp extends Polymer.Element {
+      
+      static get is() { return 'syn-app' }
+
+    }
+
+    customElements.define(SynApp.is, SynApp)
+  </script>
+</dom-module>
+
